@@ -1,0 +1,35 @@
+@startuml
+skinparam actorStyle awesome
+
+'читатель'
+
+actor "Читатель" as reader
+usecase "Читать новости" as read
+reader --> read
+usecase "комментировать" as comment
+usecase "удалять комментарии" as deleteComment
+reader --> comment
+reader --> deleteComment
+
+'автор'
+
+actor "Автор" as author
+author --> read
+author --> comment
+usecase "Создавать" as create
+author --> create
+usecase "Обновлять" as update
+usecase "удалять" as delete
+usecase "получить все свои записи" as getAllAutorNews
+author --> update
+author --> delete
+author --> getAllAutorNews
+
+'модератор'
+
+actor "модератор" as moderator
+moderator --> read
+moderator --> delete
+moderator --> update
+moderator --> deleteComment
+@enduml
