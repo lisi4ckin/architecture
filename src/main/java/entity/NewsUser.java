@@ -30,4 +30,10 @@ public class NewsUser {
             inverseJoinColumns = @JoinColumn(name = "news_id"))
     private Set<News> userNews;
 
+    @OneToMany(cascade = {
+            CascadeType.MERGE,
+            CascadeType.PERSIST
+    }, fetch = FetchType.LAZY,
+            mappedBy = "user_permission")
+    private Set<UserPermission> permissionSet;
 }
