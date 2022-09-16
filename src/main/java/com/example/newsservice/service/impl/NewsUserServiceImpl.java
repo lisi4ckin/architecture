@@ -1,7 +1,7 @@
-package service.impl;
+package com.example.newsservice.service.impl;
 
+import com.example.newsservice.service.NewsUserService;
 import org.springframework.stereotype.Service;
-import service.NewsUserService;
 
 @Service
 public class NewsUserServiceImpl implements NewsUserService {

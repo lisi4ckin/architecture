@@ -1,4 +1,4 @@
-package entity;
+package com.example.newsservice.entity;
 
 import lombok.Data;
 
